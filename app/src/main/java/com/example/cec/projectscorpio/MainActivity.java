@@ -1,4 +1,4 @@
-package com.example.pavan.projectscorpio;
+package com.example.cec.projectscorpio;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

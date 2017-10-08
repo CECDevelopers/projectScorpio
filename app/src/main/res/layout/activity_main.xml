@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_orange_light"
     android:padding="@dimen/activity_padding"
-    tools:context="com.example.pavan.projectscorpio.MainActivity">
+    tools:context="com.example.cec.projectscorpio.MainActivity">
 
     <!--TODO Change the color of the activity if needed -->
     <!--TODO Change the logo and modify the buttons and look of the app-->

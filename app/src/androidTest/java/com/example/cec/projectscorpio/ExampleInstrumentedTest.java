@@ -1,4 +1,4 @@
-package com.example.pavan.projectscorpio;
+package com.example.cec.projectscorpio;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

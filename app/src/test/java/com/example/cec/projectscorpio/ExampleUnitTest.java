@@ -1,4 +1,4 @@
-package com.example.pavan.projectscorpio;
+package com.example.cec.projectscorpio;
 
 import org.junit.Test;
 
