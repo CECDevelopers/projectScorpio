@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">projectScorpio</string>
-    <string-array name="courses">
-        <item>Computer Science Engineering</item>
-        <item>Civil Engineering</item>
-        <item>Electronics and Communications Engineering</item>
-        <item>Mechanical Engineering</item>
-    </string-array>
+    <string name="CS">Computer Science and Engineering</string>
+    <string name="CE">Civil Engineering</string>
+    <string name="EC">Electronics and Communications Engineering</string>
+    <string name="ME">Mechanical Engineering</string>
 </resources>
