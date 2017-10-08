@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">projectScorpio</string>
+    <string-array name="courses">
+        <item>Computer Science Engineering</item>
+        <item>Civil Engineering</item>
+        <item>Electronics and Communications Engineering</item>
+        <item>Mechanical Engineering</item>
+    </string-array>
 </resources>
