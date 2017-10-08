@@ -43,6 +43,8 @@ public class CourseListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getApplicationContext(), "You Clicked " +
                         adapterView.getItemAtPosition(i), Toast.LENGTH_SHORT).show();
+
+                //TODO create activities to navigate from the courselist.
             }
         });
 
