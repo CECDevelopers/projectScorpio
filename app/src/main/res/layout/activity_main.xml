@@ -10,8 +10,10 @@
     <!--TODO Change the color of the activity if needed -->
     <!--TODO Change the logo and modify the buttons and look of the app-->
     <ImageView
+        android:id="@+id/cec_image_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="100dp"
         android:src="@drawable/logo_cec" />
 
     <!--TODO change the welcome text if needed -->
@@ -19,8 +21,10 @@
         android:id="@+id/welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Welcome.."
+        android:layout_centerHorizontal="true"
+        android:text="Welcome"
+        android:layout_alignBottom="@id/cec_image_view"
+        android:textAllCaps="true"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -34,6 +38,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:text="Browse Videos" />
+        android:text="Next"
+        android:onClick=""/>
 
 </RelativeLayout>
