@@ -27,12 +27,12 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
 
+        if (!b) {
+            youTubePlayer.cueVideo(PLAYLIST_ID);
+        }
+
         youTubePlayer.setPlayerStateChangeListener(playerStateChangeListener);
         youTubePlayer.setPlaybackEventListener(playbackEventListener);
-
-        if (!b) {
-            youTubePlayer.cuePlaylist(PLAYLIST_ID);
-        }
     }
 
     @Override
