@@ -1,5 +1,6 @@
 package com.example.cec.projectscorpio;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -45,6 +46,8 @@ public class SemesterListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getApplicationContext(), "You Clicked " +
                         adapterView.getItemAtPosition(i), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(SemesterListActivity.this, YoutubeActivity.class);
+                startActivity(intent);
             }
         });
     }

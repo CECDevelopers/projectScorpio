@@ -11,18 +11,17 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
-    public static final String API_KEY = "AIzaSyAA_C4GQ1V5Yq3R3dJCR5QLoqsTIWrNcoo";
-    public static final String PLAYLIST_ID = "PL2bn_rcSaBBjJ_ulaJ7t7v8LfGG-FgD4z";
-
-    YouTubePlayerView youTubePlayerView ;
+    public static final String API_KEY = "AIzaSyBh8BMlHFLWyI_YfvqMQDRwBR17PgFJzQg";
+    public static final String PLAYLIST_ID = "2Wo_QfQZ0lE";
+    YouTubePlayerView youTubePlayerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube);
 
-        youTubePlayerView = (YouTubePlayerView)findViewById(R.id.yt_view);
-        youTubePlayerView.initialize(API_KEY,this);
+        youTubePlayerView = (YouTubePlayerView) findViewById(R.id.yt_view);
+        youTubePlayerView.initialize(API_KEY, this);
     }
 
     @Override
@@ -30,7 +29,8 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
 
         youTubePlayer.setPlayerStateChangeListener(playerStateChangeListener);
         youTubePlayer.setPlaybackEventListener(playbackEventListener);
-        if(!b){
+
+        if (!b) {
             youTubePlayer.cuePlaylist(PLAYLIST_ID);
         }
     }
