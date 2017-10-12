@@ -1,5 +1,6 @@
 package com.example.cec.projectscorpio;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -41,10 +42,8 @@ public class CourseListActivity extends AppCompatActivity {
         courseView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(), "You Clicked " +
-                        adapterView.getItemAtPosition(i), Toast.LENGTH_SHORT).show();
-
-                //TODO create activities to navigate from the courselist.
+                Intent intent = new Intent(CourseListActivity.this, SemesterListActivity.class);
+                startActivity(intent);
             }
         });
 
