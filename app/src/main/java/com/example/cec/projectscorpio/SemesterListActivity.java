@@ -44,10 +44,8 @@ public class SemesterListActivity extends AppCompatActivity {
         semesterView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(), "You Clicked " +
-                        adapterView.getItemAtPosition(i), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SemesterListActivity.this, YoutubeActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, 1);
             }
         });
     }

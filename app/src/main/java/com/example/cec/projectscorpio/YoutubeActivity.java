@@ -12,64 +12,49 @@ import com.google.android.youtube.player.YouTubePlayerView;
 public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     public static final String API_KEY = "AIzaSyBh8BMlHFLWyI_YfvqMQDRwBR17PgFJzQg";
-    public static final String PLAYLIST_ID = "2Wo_QfQZ0lE";
-    YouTubePlayerView youTubePlayerView;
+    public static final String ID = "iC3eZwI4Lt8";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube);
 
-        youTubePlayerView = (YouTubePlayerView) findViewById(R.id.yt_view);
+        YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.yt_view);
         youTubePlayerView.initialize(API_KEY, this);
     }
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
 
+        /** Start Buffering **/
         if (!b) {
-            youTubePlayer.cueVideo(PLAYLIST_ID);
+            youTubePlayer.cueVideo(ID);
         }
 
+        /**Add Listeners to Youtube Player Instance **/
         youTubePlayer.setPlayerStateChangeListener(playerStateChangeListener);
         youTubePlayer.setPlaybackEventListener(playbackEventListener);
+
+
     }
 
+
+    /**
+     * This method is called when, youtubeplayer is not initialized
+     *
+     * @param provider
+     * @param youTubeInitializationResult
+     */
     @Override
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-        Toast.makeText(getApplicationContext(), "Failed To Initialize!", Toast.LENGTH_SHORT).show();
-
+        Toast.makeText(getApplicationContext(), "Failed To Initialize Player!", Toast.LENGTH_SHORT).show();
     }
 
 
-    private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
-        @Override
-        public void onPlaying() {
-
-        }
-
-        @Override
-        public void onPaused() {
-
-        }
-
-        @Override
-        public void onStopped() {
-
-        }
-
-        @Override
-        public void onBuffering(boolean b) {
-
-        }
-
-        @Override
-        public void onSeekTo(int i) {
-
-        }
-    };
-
-    private YouTubePlayer.PlayerStateChangeListener playerStateChangeListener = new YouTubePlayer.PlayerStateChangeListener() {
+    /**
+     * This Calss is used to handle video loading chatracteristics
+     */
+    YouTubePlayer.PlayerStateChangeListener playerStateChangeListener = new YouTubePlayer.PlayerStateChangeListener() {
         @Override
         public void onLoading() {
 
@@ -97,6 +82,33 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
 
         @Override
         public void onError(YouTubePlayer.ErrorReason errorReason) {
+
+        }
+    };
+
+    YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
+        @Override
+        public void onPlaying() {
+
+        }
+
+        @Override
+        public void onPaused() {
+
+        }
+
+        @Override
+        public void onStopped() {
+
+        }
+
+        @Override
+        public void onBuffering(boolean b) {
+
+        }
+
+        @Override
+        public void onSeekTo(int i) {
 
         }
     };
