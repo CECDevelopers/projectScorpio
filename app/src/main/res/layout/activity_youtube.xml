@@ -5,22 +5,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.cec.projectscorpio.YoutubeActivity">
 
-    <com.google.android.youtube.player.YouTubePlayerView
+    <fragment
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment"
         android:id="@+id/yt_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></com.google.android.youtube.player.YouTubePlayerView>
-
-    <TextView
-        android:id="@+id/back_button"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:layout_alignParentBottom="true"
-        android:background="@android:color/holo_blue_light"
-        android:gravity="center"
-        android:text="Go Back to Subjects"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:typeface="serif" />
-
+        android:layout_height="wrap_content"/>
 </RelativeLayout>

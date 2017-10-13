@@ -5,17 +5,20 @@ import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerFragment;
 import com.google.android.youtube.player.YouTubePlayerView;
 
-public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
+public class YoutubeActivity extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
 
     public static final String API_KEY = "AIzaSyBh8BMlHFLWyI_YfvqMQDRwBR17PgFJzQg";
+    private static final int RECOVERY_DIALOG_REQUEST = 1;
     public static final String ID = "iC3eZwI4Lt8";
 
     @Override
@@ -23,22 +26,8 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube);
 
-        YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.yt_view);
+        YouTubePlayerFragment youTubePlayerView = (YouTubePlayerFragment)getFragmentManager().findFragmentById(R.id.yt_view);
         youTubePlayerView.initialize(API_KEY, this);
-
-        TextView backButton = (TextView) findViewById(R.id.back_button);
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            backButton.setVisibility(View.INVISIBLE);
-        }
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(YoutubeActivity.this, SemesterListActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
     }
 
     @Override
@@ -62,7 +51,14 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
      */
     @Override
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-        Toast.makeText(getApplicationContext(), "Failed To Initialize Player!", Toast.LENGTH_SHORT).show();
+        if (youTubeInitializationResult.isUserRecoverableError()) {
+            youTubeInitializationResult.getErrorDialog(this, RECOVERY_DIALOG_REQUEST).show();
+        } else {
+            String errorMessage = String.format(
+                    "There was an error initializing the YouTubePlayer (%1$s)",
+                    youTubeInitializationResult.toString());
+            Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show();
+        }
     }
 
     /**
@@ -126,4 +122,17 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
 
         }
     };
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == RECOVERY_DIALOG_REQUEST) {
+            // Retry initialization if user performed a recovery action
+            getYouTubePlayerProvider().initialize(API_KEY, this);
+        }
+    }
+
+    protected YouTubePlayer.Provider getYouTubePlayerProvider() {
+        return (YouTubePlayerView)findViewById(R.id.yt_view);
+    }
 }
