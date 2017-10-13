@@ -1,7 +1,11 @@
 package com.example.cec.projectscorpio;
 
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -21,6 +25,20 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
 
         YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.yt_view);
         youTubePlayerView.initialize(API_KEY, this);
+
+        TextView backButton = (TextView) findViewById(R.id.back_button);
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            backButton.setVisibility(View.INVISIBLE);
+        }
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(YoutubeActivity.this, SemesterListActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
     @Override
@@ -34,10 +52,7 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
         /**Add Listeners to Youtube Player Instance **/
         youTubePlayer.setPlayerStateChangeListener(playerStateChangeListener);
         youTubePlayer.setPlaybackEventListener(playbackEventListener);
-
-
     }
-
 
     /**
      * This method is called when, youtubeplayer is not initialized
@@ -49,7 +64,6 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
         Toast.makeText(getApplicationContext(), "Failed To Initialize Player!", Toast.LENGTH_SHORT).show();
     }
-
 
     /**
      * This Calss is used to handle video loading chatracteristics
