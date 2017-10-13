@@ -32,6 +32,7 @@ public class CourseListActivity extends AppCompatActivity {
         courseList.add(getString(R.string.CE));
         courseList.add(getString(R.string.EC));
         courseList.add(getString(R.string.ME));
+        courseList.add(getString(R.string.Year_one));
 
         courseView = (ListView) findViewById(R.id.list);
 
