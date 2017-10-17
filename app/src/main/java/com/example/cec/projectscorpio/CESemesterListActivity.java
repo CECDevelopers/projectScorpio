@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -15,7 +14,7 @@ import java.util.ArrayList;
  * Created by pavan on 10/12/2017.
  */
 
-public class SemesterListActivity extends AppCompatActivity {
+public class CESemesterListActivity extends AppCompatActivity {
 
     ListView semesterView;
 
@@ -44,8 +43,11 @@ public class SemesterListActivity extends AppCompatActivity {
         semesterView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(SemesterListActivity.this, YoutubeActivity.class);
-                startActivityForResult(intent, 1);
+                if( i == 0 ) {
+                    Intent intent = new Intent(CESemesterListActivity.this, YoutubeActivity.class);
+                    startActivityForResult(intent, 0);
+                }
+
             }
         });
     }
