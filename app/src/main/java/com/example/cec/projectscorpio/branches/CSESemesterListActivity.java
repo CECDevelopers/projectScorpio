@@ -1,4 +1,4 @@
-package com.example.cec.projectscorpio;
+package com.example.cec.projectscorpio.branches;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,13 +8,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.cec.projectscorpio.R;
+import com.example.cec.projectscorpio.YoutubeActivity;
+
 import java.util.ArrayList;
 
 /**
  * Created by pavan on 10/12/2017.
  */
 
-public class ECSemesterListActivity extends AppCompatActivity {
+public class CSESemesterListActivity extends AppCompatActivity {
 
     ListView semesterView;
 
@@ -44,7 +47,7 @@ public class ECSemesterListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if( i == 0 ) {
-                    Intent intent = new Intent(ECSemesterListActivity.this, YoutubeActivity.class);
+                    Intent intent = new Intent(CSESemesterListActivity.this, YoutubeActivity.class);
                     startActivityForResult(intent, 0);
                 }
 

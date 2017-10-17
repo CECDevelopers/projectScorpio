@@ -2,8 +2,8 @@
     <string name="app_name">projectScorpio</string>
 
 
-    <string name="PCycle">Physics Cycle - First Year</string>
-    <string name="CCycle">Chemistry Cycle - First Year</string>
+    <string name="p_cycle">Physics Cycle - First Year</string>
+    <string name="c_cycle">Chemistry Cycle - First Year</string>
     <string name="CS">Computer Science and Engineering</string>
     <string name="CE">Civil Engineering</string>
     <string name="EC">Electronics and Communications Engineering</string>

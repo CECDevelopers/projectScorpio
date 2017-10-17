@@ -29,7 +29,7 @@
         </activity>
 
         <activity
-            android:name=".CCycleSubjectsListActivity"
+            android:name=".branches.CCycleSubjectsListActivity"
             android:label="Subjects"
             android:parentActivityName=".CourseListActivity">
             <meta-data
@@ -38,7 +38,7 @@
         </activity>
 
         <activity
-            android:name=".CESemesterListActivity"
+            android:name=".branches.CESemesterListActivity"
             android:label="Semesters"
             android:parentActivityName=".CourseListActivity">
             <meta-data
@@ -47,7 +47,7 @@
         </activity>
 
         <activity
-            android:name=".CSESemesterListActivity"
+            android:name=".branches.CSESemesterListActivity"
             android:label="Semesters"
             android:parentActivityName=".CourseListActivity">
             <meta-data
@@ -56,7 +56,7 @@
         </activity>
 
         <activity
-            android:name=".ECSemesterListActivity"
+            android:name=".branches.ECSemesterListActivity"
             android:label="Semesters"
             android:parentActivityName=".CourseListActivity">
             <meta-data
@@ -65,7 +65,7 @@
         </activity>
 
         <activity
-            android:name=".MESemesterListActivity"
+            android:name=".branches.MESemesterListActivity"
             android:label="Semesters"
             android:parentActivityName=".CourseListActivity">
             <meta-data
@@ -74,7 +74,7 @@
         </activity>
 
         <activity
-            android:name=".PCycleSubjectsListActivity"
+            android:name=".branches.PCycleSubjectsListActivity"
             android:label="Subjects"
             android:parentActivityName=".CourseListActivity">
             <meta-data
@@ -86,10 +86,10 @@
             android:name=".YoutubeActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="Video"
-            android:parentActivityName=".CSESemesterListActivity">
+            android:parentActivityName=".branches.CSESemesterListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".CSESemesterListActivity" />
+                android:value=".branches.CSESemesterListActivity" />
         </activity>
 
     </application>

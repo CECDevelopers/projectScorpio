@@ -8,6 +8,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.cec.projectscorpio.branches.CCycleSubjectsListActivity;
+import com.example.cec.projectscorpio.branches.CESemesterListActivity;
+import com.example.cec.projectscorpio.branches.CSESemesterListActivity;
+import com.example.cec.projectscorpio.branches.ECSemesterListActivity;
+import com.example.cec.projectscorpio.branches.MESemesterListActivity;
+import com.example.cec.projectscorpio.branches.PCycleSubjectsListActivity;
+
 import java.util.ArrayList;
 
 /**
@@ -27,8 +34,8 @@ public class CourseListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cec_courses_list);
 
-        courseList.add(getString(R.string.PCycle));
-        courseList.add(getString(R.string.CCycle));
+        courseList.add(getString(R.string.p_cycle));
+        courseList.add(getString(R.string.c_cycle));
         courseList.add(getString(R.string.CS));
         courseList.add(getString(R.string.CE));
         courseList.add(getString(R.string.EC));
@@ -45,7 +52,7 @@ public class CourseListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if ( i == 0 ) {
                     Intent intent = new Intent(CourseListActivity.this, PCycleSubjectsListActivity.class);
-                    startActivityForResult(intent,0);
+                    startActivity(intent);
                 }
                 if ( i == 1 ) {
                     Intent intent = new Intent(CourseListActivity.this, CCycleSubjectsListActivity.class);
@@ -69,6 +76,5 @@ public class CourseListActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 }

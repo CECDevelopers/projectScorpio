@@ -1,4 +1,4 @@
-package com.example.cec.projectscorpio;
+package com.example.cec.projectscorpio.branches;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.cec.projectscorpio.R;
+import com.example.cec.projectscorpio.YoutubeActivity;
 
 import java.util.ArrayList;
 
