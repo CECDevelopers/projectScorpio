@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -28,11 +27,12 @@ public class CourseListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cec_courses_list);
 
+        courseList.add(getString(R.string.PCycle));
+        courseList.add(getString(R.string.CCycle));
         courseList.add(getString(R.string.CS));
         courseList.add(getString(R.string.CE));
         courseList.add(getString(R.string.EC));
         courseList.add(getString(R.string.ME));
-        courseList.add(getString(R.string.Year_one));
 
         courseView = (ListView) findViewById(R.id.list);
 
@@ -43,8 +43,30 @@ public class CourseListActivity extends AppCompatActivity {
         courseView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(CourseListActivity.this, SemesterListActivity.class);
-                startActivity(intent);
+                if ( i == 0 ) {
+                    Intent intent = new Intent(CourseListActivity.this, PCycleSubjectsListActivity.class);
+                    startActivityForResult(intent,0);
+                }
+                if ( i == 1 ) {
+                    Intent intent = new Intent(CourseListActivity.this, CCycleSubjectsListActivity.class);
+                    startActivity(intent);
+                }
+                if ( i == 2 ) {
+                    Intent intent = new Intent(CourseListActivity.this, CSESemesterListActivity.class);
+                    startActivity(intent);
+                }
+                if ( i == 3 ) {
+                    Intent intent = new Intent(CourseListActivity.this, CESemesterListActivity.class);
+                    startActivity(intent);
+                }
+                if ( i == 4 ) {
+                    Intent intent = new Intent(CourseListActivity.this, ECSemesterListActivity.class);
+                    startActivity(intent);
+                }
+                if ( i == 5 ) {
+                    Intent intent = new Intent(CourseListActivity.this, MESemesterListActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 

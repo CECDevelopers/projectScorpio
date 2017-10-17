@@ -21,7 +21,7 @@
 
         <activity
             android:name=".CourseListActivity"
-            android:label="@string/app_name"
+            android:label="Courses"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -29,8 +29,53 @@
         </activity>
 
         <activity
-            android:name=".SemesterListActivity"
-            android:label="Semester"
+            android:name=".CCycleSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".CourseListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CourseListActivity" />
+        </activity>
+
+        <activity
+            android:name=".CESemesterListActivity"
+            android:label="Semesters"
+            android:parentActivityName=".CourseListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CourseListActivity" />
+        </activity>
+
+        <activity
+            android:name=".CSESemesterListActivity"
+            android:label="Semesters"
+            android:parentActivityName=".CourseListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CourseListActivity" />
+        </activity>
+
+        <activity
+            android:name=".ECSemesterListActivity"
+            android:label="Semesters"
+            android:parentActivityName=".CourseListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CourseListActivity" />
+        </activity>
+
+        <activity
+            android:name=".MESemesterListActivity"
+            android:label="Semesters"
+            android:parentActivityName=".CourseListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CourseListActivity" />
+        </activity>
+
+        <activity
+            android:name=".PCycleSubjectsListActivity"
+            android:label="Subjects"
             android:parentActivityName=".CourseListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -41,10 +86,10 @@
             android:name=".YoutubeActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="Video"
-            android:parentActivityName=".SemesterListActivity">
+            android:parentActivityName=".CSESemesterListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SemesterListActivity" />
+                android:value=".CSESemesterListActivity" />
         </activity>
 
     </application>
