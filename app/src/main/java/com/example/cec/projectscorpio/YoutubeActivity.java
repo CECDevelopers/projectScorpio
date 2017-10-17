@@ -4,12 +4,8 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerFragment;
@@ -26,7 +22,7 @@ public class YoutubeActivity extends AppCompatActivity implements YouTubePlayer.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube);
 
-        YouTubePlayerFragment youTubePlayerView = (YouTubePlayerFragment)getFragmentManager().findFragmentById(R.id.yt_view);
+        YouTubePlayerFragment youTubePlayerView = (YouTubePlayerFragment) getFragmentManager().findFragmentById(R.id.yt_view);
         youTubePlayerView.initialize(API_KEY, this);
     }
 
@@ -133,6 +129,8 @@ public class YoutubeActivity extends AppCompatActivity implements YouTubePlayer.
     }
 
     protected YouTubePlayer.Provider getYouTubePlayerProvider() {
-        return (YouTubePlayerView)findViewById(R.id.yt_view);
+        return (YouTubePlayerView) findViewById(R.id.yt_view);
     }
+
 }
+
