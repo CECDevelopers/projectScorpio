@@ -1,4 +1,4 @@
-package com.example.cec.projectscorpio.branches.computerScience;
+package com.example.cec.projectscorpio.branches.electronicsAndCommunications;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 
 
-public class EighthSemCSSubjectsListActivity extends AppCompatActivity {
+public class SixthSemECSubjectsListActivity extends AppCompatActivity {
 
     ListView subjectsView;
 
@@ -44,7 +44,7 @@ public class EighthSemCSSubjectsListActivity extends AppCompatActivity {
         subjectsView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(EighthSemCSSubjectsListActivity.this, YoutubeActivity.class);
+                Intent intent = new Intent(SixthSemECSubjectsListActivity.this, YoutubeActivity.class);
                 startActivity(intent);
             }
         });

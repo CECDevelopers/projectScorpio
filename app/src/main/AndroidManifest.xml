@@ -200,7 +200,117 @@
                 android:value=".branches.CSESemesterListActivity" />
         </activity>
 
+        <!-->       Subjects List Activity of each Semester in Electronics and Communications        <-->
 
+        <activity
+            android:name=".branches.electronicsAndCommunications.ThirdSemECSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.ECSemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.ECSemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.electronicsAndCommunications.FourthSemECSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.ECSemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.ECSemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.electronicsAndCommunications.FifthSemECSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.ECSemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.ECSemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.electronicsAndCommunications.SixthSemECSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.ECSemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.ECSemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.electronicsAndCommunications.SeventhSemECSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.ECSemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.ECSemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.electronicsAndCommunications.EighthSemECSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.ECSemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.ECSemesterListActivity" />
+        </activity>
+
+        <!-->       Subjects List Activity of each Semester in Mechanical        <-->
+
+        <activity
+            android:name=".branches.mechanical.ThirdSemMechanicalSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.MESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.MESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.mechanical.FourthSemMechanicalSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.MESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.MESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.mechanical.FifthSemMechanicalSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.MESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.MESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.mechanical.SixthSemMechanicalSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.MESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.MESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.mechanical.SeventhSemMechanicalSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.MESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.MESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.mechanical.EighthSemMechanicalSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.MESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.MESemesterListActivity" />
+        </activity>
 
 
 
