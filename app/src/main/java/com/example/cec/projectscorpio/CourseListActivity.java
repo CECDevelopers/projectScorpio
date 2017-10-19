@@ -15,29 +15,21 @@ import com.example.cec.projectscorpio.branches.MESemesterListActivity;
 import com.example.cec.projectscorpio.branches.firstYear.CCycleSubjectsListActivity;
 import com.example.cec.projectscorpio.branches.firstYear.PCycleSubjectsListActivity;
 
-import java.util.ArrayList;
-
 
 
 public class CourseListActivity extends AppCompatActivity {
 
     ListView courseView;
 
-    ArrayList<String> courseList = new ArrayList<String>();
-
     ArrayAdapter courseAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cec_courses_list);
 
-        courseList.add(getString(R.string.p_cycle));
-        courseList.add(getString(R.string.c_cycle));
-        courseList.add(getString(R.string.CS));
-        courseList.add(getString(R.string.CE));
-        courseList.add(getString(R.string.EC));
-        courseList.add(getString(R.string.ME));
+        String[] courseList = getResources().getStringArray(R.array.courses);
 
         courseView = (ListView) findViewById(R.id.list);
 

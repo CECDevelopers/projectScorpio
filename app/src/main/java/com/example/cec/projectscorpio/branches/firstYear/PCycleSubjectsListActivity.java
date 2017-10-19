@@ -11,14 +11,10 @@ import android.widget.ListView;
 import com.example.cec.projectscorpio.R;
 import com.example.cec.projectscorpio.YoutubeActivity;
 
-import java.util.ArrayList;
-
 
 public class PCycleSubjectsListActivity extends AppCompatActivity {
 
     ListView subjectsView;
-
-    ArrayList<String> subjectsList = new ArrayList<String>();
 
     ArrayAdapter subjectsAdapter;
 
@@ -27,12 +23,7 @@ public class PCycleSubjectsListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.subjects_list);
 
-        subjectsList.add("Subject 1");
-        subjectsList.add("Subject 2");
-        subjectsList.add("Subject 3");
-        subjectsList.add("Subject 4");
-        subjectsList.add("Subject 5");
-        subjectsList.add("Subject 6");
+        String[] subjectsList = getResources().getStringArray(R.array.p_cycle_subjects);
 
         subjectsView = (ListView) findViewById(R.id.subjects_list);
 

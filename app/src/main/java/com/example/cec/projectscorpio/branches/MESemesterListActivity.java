@@ -16,15 +16,11 @@ import com.example.cec.projectscorpio.branches.mechanical.SeventhSemMechanicalSu
 import com.example.cec.projectscorpio.branches.mechanical.SixthSemMechanicalSubjectsListActivity;
 import com.example.cec.projectscorpio.branches.mechanical.ThirdSemMechanicalSubjectsListActivity;
 
-import java.util.ArrayList;
-
 
 
 public class MESemesterListActivity extends AppCompatActivity {
 
     ListView semesterView;
-
-    ArrayList<String> semesterList = new ArrayList<String>();
 
     ArrayAdapter semesterAdapter;
 
@@ -33,12 +29,7 @@ public class MESemesterListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.semester_list);
 
-        semesterList.add(getString(R.string.Third));
-        semesterList.add(getString(R.string.Fourth));
-        semesterList.add(getString(R.string.Fifth));
-        semesterList.add(getString(R.string.Sixth));
-        semesterList.add(getString(R.string.Seventh));
-        semesterList.add(getString(R.string.Eighth));
+        String[] semesterList = getResources().getStringArray(R.array.semesters);
 
         semesterView = (ListView) findViewById(R.id.semester_list);
 
