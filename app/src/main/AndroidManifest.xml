@@ -19,8 +19,7 @@
             </intent-filter>
         </activity>
 
-
-
+        <!-->       For Course List Activity        <-->
 
         <activity
             android:name=".CourseListActivity"
@@ -31,8 +30,7 @@
                 android:value=".MainActivity" />
         </activity>
 
-
-
+        <!-->       For all Semester List Activities        <-->
 
         <activity
             android:name=".branches.CESemesterListActivity"
@@ -70,9 +68,7 @@
                 android:value=".CourseListActivity" />
         </activity>
 
-
-
-
+        <!-->       For First Year Subjects List Activity         <-->
 
         <activity
             android:name=".branches.firstYear.PCycleSubjectsListActivity"
@@ -92,8 +88,7 @@
                 android:value=".CourseListActivity" />
         </activity>
 
-
-
+        <!-->       Subjects List Activity of each Semester in Civil        <-->
 
         <activity
             android:name=".branches.civil.ThirdSemCivilSubjectsListActivity"
@@ -149,8 +144,67 @@
                 android:value=".branches.CESemesterListActivity" />
         </activity>
 
+        <!-->       Subjects List Activity of each Semester in Computer Science        <-->
+
+        <activity
+            android:name=".branches.computerScience.ThirdSemCSSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.CSESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.CSESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.computerScience.FourthSemCSSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.CSESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.CSESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.computerScience.FifthSemCSSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.CSESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.CSESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.computerScience.SixthSemCSSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.CSESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.CSESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.computerScience.SeventhSemCSSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.CSESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.CSESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.computerScience.EighthSemCSSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.CSESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.CSESemesterListActivity" />
+        </activity>
 
 
+
+
+
+        <!-->       For Youtube Activity        <-->
 
         <activity
             android:name=".YoutubeActivity"
