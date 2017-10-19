@@ -19,6 +19,9 @@
             </intent-filter>
         </activity>
 
+
+
+
         <activity
             android:name=".CourseListActivity"
             android:label="Courses"
@@ -28,14 +31,8 @@
                 android:value=".MainActivity" />
         </activity>
 
-        <activity
-            android:name=".branches.CCycleSubjectsListActivity"
-            android:label="Subjects"
-            android:parentActivityName=".CourseListActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".CourseListActivity" />
-        </activity>
+
+
 
         <activity
             android:name=".branches.CESemesterListActivity"
@@ -73,14 +70,87 @@
                 android:value=".CourseListActivity" />
         </activity>
 
+
+
+
+
         <activity
-            android:name=".branches.PCycleSubjectsListActivity"
+            android:name=".branches.firstYear.PCycleSubjectsListActivity"
             android:label="Subjects"
             android:parentActivityName=".CourseListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".CourseListActivity" />
         </activity>
+
+        <activity
+            android:name=".branches.firstYear.CCycleSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".CourseListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CourseListActivity" />
+        </activity>
+
+
+
+
+        <activity
+            android:name=".branches.civil.ThirdSemCivilSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.CESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.CESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.civil.FourthSemCivilSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.CESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.CESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.civil.FifthSemCivilSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.CESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.CESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.civil.SixthSemCivilSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.CESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.CESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.civil.SeventhSemCivilSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.CESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.CESemesterListActivity" />
+        </activity>
+
+        <activity
+            android:name=".branches.civil.EighthSemCivilSubjectsListActivity"
+            android:label="Subjects"
+            android:parentActivityName=".branches.CESemesterListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".branches.CESemesterListActivity" />
+        </activity>
+
+
+
 
         <activity
             android:name=".YoutubeActivity"

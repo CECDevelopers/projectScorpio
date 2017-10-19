@@ -8,18 +8,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.cec.projectscorpio.branches.CCycleSubjectsListActivity;
 import com.example.cec.projectscorpio.branches.CESemesterListActivity;
 import com.example.cec.projectscorpio.branches.CSESemesterListActivity;
 import com.example.cec.projectscorpio.branches.ECSemesterListActivity;
 import com.example.cec.projectscorpio.branches.MESemesterListActivity;
-import com.example.cec.projectscorpio.branches.PCycleSubjectsListActivity;
+import com.example.cec.projectscorpio.branches.firstYear.CCycleSubjectsListActivity;
+import com.example.cec.projectscorpio.branches.firstYear.PCycleSubjectsListActivity;
 
 import java.util.ArrayList;
 
-/**
- * Created by 007 on 10/8/2017.
- */
+
 
 public class CourseListActivity extends AppCompatActivity {
 

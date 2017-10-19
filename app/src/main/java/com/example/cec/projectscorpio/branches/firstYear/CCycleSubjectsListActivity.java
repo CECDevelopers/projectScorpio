@@ -1,4 +1,4 @@
-package com.example.cec.projectscorpio.branches;
+package com.example.cec.projectscorpio.branches.firstYear;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +13,9 @@ import com.example.cec.projectscorpio.YoutubeActivity;
 
 import java.util.ArrayList;
 
-/**
- * Created by 007 on 10/8/2017.
- */
 
-public class PCycleSubjectsListActivity extends AppCompatActivity {
+
+public class CCycleSubjectsListActivity extends AppCompatActivity {
 
     ListView subjectsView;
 
@@ -46,7 +44,7 @@ public class PCycleSubjectsListActivity extends AppCompatActivity {
         subjectsView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(PCycleSubjectsListActivity.this, YoutubeActivity.class);
+                Intent intent = new Intent(CCycleSubjectsListActivity.this, YoutubeActivity.class);
                 startActivity(intent);
             }
         });

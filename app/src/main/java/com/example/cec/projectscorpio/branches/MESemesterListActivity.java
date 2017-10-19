@@ -13,9 +13,7 @@ import com.example.cec.projectscorpio.YoutubeActivity;
 
 import java.util.ArrayList;
 
-/**
- * Created by pavan on 10/12/2017.
- */
+
 
 public class MESemesterListActivity extends AppCompatActivity {
 

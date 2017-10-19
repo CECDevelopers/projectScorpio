@@ -9,13 +9,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.cec.projectscorpio.R;
-import com.example.cec.projectscorpio.YoutubeActivity;
+import com.example.cec.projectscorpio.branches.civil.EighthSemCivilSubjectsListActivity;
+import com.example.cec.projectscorpio.branches.civil.FifthSemCivilSubjectsListActivity;
+import com.example.cec.projectscorpio.branches.civil.FourthSemCivilSubjectsListActivity;
+import com.example.cec.projectscorpio.branches.civil.SeventhSemCivilSubjectsListActivity;
+import com.example.cec.projectscorpio.branches.civil.SixthSemCivilSubjectsListActivity;
+import com.example.cec.projectscorpio.branches.civil.ThirdSemCivilSubjectsListActivity;
 
 import java.util.ArrayList;
 
-/**
- * Created by pavan on 10/12/2017.
- */
 
 public class CESemesterListActivity extends AppCompatActivity {
 
@@ -47,10 +49,29 @@ public class CESemesterListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if( i == 0 ) {
-                    Intent intent = new Intent(CESemesterListActivity.this, YoutubeActivity.class);
+                    Intent intent = new Intent(CESemesterListActivity.this, ThirdSemCivilSubjectsListActivity.class);
                     startActivityForResult(intent, 0);
                 }
-
+                if( i == 1 ) {
+                    Intent intent = new Intent(CESemesterListActivity.this, FourthSemCivilSubjectsListActivity.class);
+                    startActivityForResult(intent, 1);
+                }
+                if( i == 2 ) {
+                    Intent intent = new Intent(CESemesterListActivity.this, FifthSemCivilSubjectsListActivity.class);
+                    startActivityForResult(intent, 2);
+                }
+                if( i == 3 ) {
+                    Intent intent = new Intent(CESemesterListActivity.this, SixthSemCivilSubjectsListActivity.class);
+                    startActivityForResult(intent, 3);
+                }
+                if( i == 4 ) {
+                    Intent intent = new Intent(CESemesterListActivity.this, SeventhSemCivilSubjectsListActivity.class);
+                    startActivityForResult(intent, 4);
+                }
+                if( i == 5 ) {
+                    Intent intent = new Intent(CESemesterListActivity.this, EighthSemCivilSubjectsListActivity.class);
+                    startActivityForResult(intent, 5);
+                }
             }
         });
     }
